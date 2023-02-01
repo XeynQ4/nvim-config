@@ -74,6 +74,6 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Bufferline
 keymap("n", "<C-w>", ":Bdelete!<cr>", opts)
- 
+
 -- Null-ls
 keymap("n", "<leader>f", ":Format<cr>", opts)
