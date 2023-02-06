@@ -23,11 +23,7 @@ vim.cmd [[
   augroup end
 ]]
 
--- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-  return
-end
+local packer = require("packer")
 
 -- Have packer use a popup window
 packer.init {
@@ -44,19 +40,18 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use 'nvim-lualine/lualine.nvim'
+  use "akinsho/bufferline.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
-  use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
-  use "akinsho/bufferline.nvim"
+  use 'kyazdani42/nvim-web-devicons'
   use "moll/vim-bbye"
-  use 'nvim-lualine/lualine.nvim'
   use "akinsho/toggleterm.nvim"
 
   -- Colorschemes
-  use "lunarvim/colorschemes"
-  -- use "folke/tokyonight.nvim"
-  --   require("tokyonight").setup({style = "night"}) -- colorscheme setup
+  use "lunarvim/darkplus.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -66,6 +61,7 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
+
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
@@ -78,7 +74,6 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-  use 'nvim-telescope/telescope-media-files.nvim'
 
   -- Treesitter
   use {
@@ -86,7 +81,6 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "p00f/nvim-ts-rainbow"
-  -- use "nvim-treesitter/playground"
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- Git
