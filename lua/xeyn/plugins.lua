@@ -49,9 +49,11 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use "moll/vim-bbye"
   use "akinsho/toggleterm.nvim"
+  use "norcalli/nvim-colorizer.lua"
 
   -- Colorschemes
   use "lunarvim/darkplus.nvim"
+  use {"catppuccin/nvim", as = "catppuccin"}
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
