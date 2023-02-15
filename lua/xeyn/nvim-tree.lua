@@ -38,9 +38,9 @@ nvim_tree.setup {
         ignore_list = {},
     },
     git = {
-        enable = true,
+        enable = false,
         ignore = false,
-        timeout = 3000,
+        timeout = 400,
     },
     view = {
         width = 30,

@@ -50,6 +50,7 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use "akinsho/toggleterm.nvim"
   use "norcalli/nvim-colorizer.lua"
+  use "zbirenbaum/copilot.lua"
 
   -- Colorschemes
   use "lunarvim/darkplus.nvim"
