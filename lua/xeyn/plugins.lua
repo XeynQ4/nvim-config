@@ -51,10 +51,12 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "norcalli/nvim-colorizer.lua"
   use "zbirenbaum/copilot.lua"
+  use "simrat39/rust-tools.nvim"
+  use "simrat39/inlay-hints.nvim"
 
   -- Colorschemes
   use "lunarvim/darkplus.nvim"
-  use {"catppuccin/nvim", as = "catppuccin"}
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -73,7 +75,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/mason.nvim" -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
-  use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions  
+  use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
